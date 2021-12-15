@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportVideoManager", "ExportVideoManager\ExportVideoManager.csproj", "{893B2969-A854-413B-9ABB-8A7F29A99C4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{893B2969-A854-413B-9ABB-8A7F29A99C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893B2969-A854-413B-9ABB-8A7F29A99C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893B2969-A854-413B-9ABB-8A7F29A99C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893B2969-A854-413B-9ABB-8A7F29A99C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1054100E-9186-4FE4-B248-30F963B6E9C8}
+	EndGlobalSection
+EndGlobal
