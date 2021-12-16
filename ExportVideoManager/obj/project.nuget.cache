@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "9zwyvK4eoa254YbZ9NJyueksWLypY/A1/MIgnSvSXl7pAQZyPnR5pLcppMFSM0qxzQaN5XpA7HWhgTUksJM1OQ==",
+  "dgSpecHash": "cd4dlfJTkRO7+czZTesUNo+sTscFZD664B0/CehwFlSo9LYs0ufKIJjtQXbfZC6a+1oXGVfQKezCmHa7CL2YJQ==",
   "success": true,
-  "projectFilePath": "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\truon\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj": {}
+    "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj": {}
   },
   "projects": {
-    "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj": {
+    "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
+        "projectUniqueName": "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
         "projectName": "ExportVideoManager",
-        "projectPath": "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
+        "projectPath": "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\ExportVideoManager.csproj",
         "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "D:\\VS2022\\source\\repos\\ExportVideoManager\\ExportVideoManager\\obj\\",
+        "outputPath": "D:\\VS2022\\source\\repos\\RepoExportVideoManager\\ExportVideoManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

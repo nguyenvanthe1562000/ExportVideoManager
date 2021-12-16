@@ -1,42 +1,39 @@
 ﻿using API.Constants;
 using API.Models;
 using API.Models.Authorization;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace ExportVideoManager.Models.Resource
 {
-
-    public class VideoExport : BaseModel, ISoftDeletableModel, ILoggableUserActionModel
+    // quản lý 1 tài nguyên được tập hợp từ nhiều tài nguyên
+    // mục đích tài nguyên này dùng cho các video up lên youtube hoặc kênh khác
+    public class IntegratedResources : BaseModel, ISoftDeletableModel, ILoggableUserActionModel
     {
+
         [DefaultValue("")]
-        public string ResourceFileId { get; private set; }
+        public string ResourceFileId { get; set; }
+
+        [DefaultValue("")]
+        public Editor EditorCode { get; set; } //được tạo từ editor extension nào.
+
         [Required]
         [DefaultValue("")]
         public string Name { get; set; }
 
-        [Required]
-        [DefaultValue("")]
-        public Editor EditorCode { get; set; }
+        [DefaultValue(CategoriesResource.Audio)] // loại file  sau khi được tập hợp từ nhiều tài nguyên
+        public CategoriesResource FileType { get; set; }
 
-        [DefaultValue(FileType.Video)]
-        public FileType FileType { get; set; }
-        [DefaultValue(0)]
-        public long Size { get; set; }  // byte
-        [DefaultValue(0)]        
-        public long Length { get; set; } //
         [Required]
         [DefaultValue("")]
         public string UserId { get; set; }
         public User RegistrationUser { get; set; }
+
         public virtual List<VideoResources> VideoResource { get; set; }
 
-
-
-        //---------------
+        //-------------------------------
         public bool IsDeleted { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string CreatedByUserId { get; set; }
@@ -46,7 +43,7 @@ namespace ExportVideoManager.Models.Resource
         public string DeletedByUserId { get; set; }
         public User DeletedByUser { get; set; }
 
-        public void SetResourceFileId(string resourceFileId)
+        public  void SetResourceFileId(string resourceFileId)
         {
             try
             {
@@ -68,17 +65,25 @@ namespace ExportVideoManager.Models.Resource
                     var guid = Guid.NewGuid().ToString("N").ToUpper();
                     switch (FileType)
                     {
-                        case FileType.Video:
+                        case CategoriesResource.Image:
+                            id = ResourceConst.ResourceFileId_ImagePrefix + guid;
+                            break;
+                        case CategoriesResource.Video:
                             id = ResourceConst.ResourceFileId_VideoPrefix + guid;
                             break;
-                        case FileType.Audio:
+                        case CategoriesResource.Audio:
                             id = ResourceConst.ResourceFileId_AudioPrefix + guid;
                             break;
-                       
+                        case CategoriesResource.ThirdParty:
+                            id = ResourceConst.ResourceFileId_AudioPrefix + guid;
+                            break;
+                        case CategoriesResource.IntegratedResources:
+                            id = ResourceConst.ResourceFileId_ThirdPartyPrefix + guid;
+                            break;
                         default:
                             id = ResourceConst.ResourceFileId_ThirdPartyPrefix + guid;
                             break;
-                    }
+                    }                   
                     ResourceFileId = id;
 
                 }
@@ -90,14 +95,5 @@ namespace ExportVideoManager.Models.Resource
                 //throw;
             }
         }
-    }
-
-    public enum FileType
-    {
-      
-        Audio = 1,
-        Video = 2,
-     
-       
     }
 }
